@@ -1,6 +1,6 @@
 # .NET Core daemon
 
-Test the app and check if shut down gratefully.
+Test the app and check if shut down gracefully.
 
 `dotnet build mydaemon`  
 `dotnet run --project mydaemon --Daemon:DaemonName="Cool Daemon"`
