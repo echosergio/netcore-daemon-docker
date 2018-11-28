@@ -25,7 +25,6 @@ namespace mydaemon
                 {
                     services.AddOptions();
                     services.Configure<DaemonConfig>(hostContext.Configuration.GetSection("Daemon"));
-
                     services.AddSingleton<IHostedService, DaemonService>();
                 })
                 .ConfigureLogging((hostingContext, logging) =>

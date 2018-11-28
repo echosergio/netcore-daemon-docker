@@ -7,11 +7,12 @@ using Microsoft.Extensions.Options;
 
 namespace mydaemon
 {
-
     public class DaemonService : IHostedService, IDisposable
     {
         private readonly ILogger _logger;
+
         private readonly IOptions<DaemonConfig> _config;
+
         public DaemonService(ILogger<DaemonService> logger, IOptions<DaemonConfig> config)
         {
             _logger = logger;
@@ -33,7 +34,6 @@ namespace mydaemon
         public void Dispose()
         {
             _logger.LogInformation("Disposing...");
-
         }
     }
 }
